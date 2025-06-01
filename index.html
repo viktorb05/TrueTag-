@@ -16,9 +16,27 @@
             background-color: #123d29;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
+            font-size: 32px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #145237;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #90ee90;
         }
         .content {
             padding: 30px;
@@ -34,36 +52,86 @@
         .donate h2 {
             margin-top: 0;
         }
+        .wallet {
+            word-break: break-all;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .wallet img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+        .hidden-address {
+            user-select: none;
+            color: #ccc;
+        }
         footer {
             background-color: #123d29;
             padding: 10px;
             text-align: center;
             margin-top: 40px;
         }
-        .wallet {
-            word-break: break-all;
-            font-family: monospace;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>TrueTag</h1>
+        <h1>🔒 TrueTag</h1>
         <p>Smart Anti-Theft and Authenticity System</p>
     </header>
-    <div class="content">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tech">Technology</a>
+        <a href="#support">Support Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content" id="home">
         <h2>Welcome!</h2>
         <p>TrueTag is a smart system designed to help brands prevent product theft and confirm product authenticity. Based on NFC and QR technology, it offers brands and buyers peace of mind.</p>
+    </div>
 
-        <div class="donate">
-            <h2>Support Our Project</h2>
-            <p>If you appreciate our mission and would like to help us grow, feel free to donate ❤️</p>
-            <p><strong>Solana:</strong><br><span class="wallet">6zG8DPfuJg9nERRYDropLuNJHKjNL9v26oA3dsf1vHFj</span></p>
-            <p><strong>USDT (TRC-20):</strong><br><span class="wallet">TWRoiYA18iSe1rFeaaAUHjFSwYiCAsPthh</span></p>
-            <p><strong>Bitcoin:</strong><br><span class="wallet">bc1qwy3xtrrx0pe9vr8xdwjqq9zkc5ujp59eh4c3hx</span></p>
-            <p><strong>Ethereum:</strong><br><span class="wallet">0x2f021C931e4E2c2a4D0d5369D72903b0b7081D5A</span></p>
+    <div class="content" id="about">
+        <h2>About TrueTag</h2>
+        <p>Developed by Viktor Bocskor & AI Partner, TrueTag aims to modernize product security and build trust between brands and customers. Our system is discreet, effective, and scalable for various industries.</p>
+    </div>
+
+    <div class="content" id="tech">
+        <h2>Technology</h2>
+        <p>Our solution uses a combination of encrypted NFC tags and QR codes to register, track, and verify authenticity of physical products. When scanned, the system checks against the TrueTag database for validity.</p>
+    </div>
+
+    <div class="content donate" id="support">
+        <h2>Support Our Project ❤️</h2>
+        <p>If you appreciate our mission and would like to help us grow, feel free to donate:</p>
+
+        <div class="wallet">
+            <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana">
+            Solana: <span class="hidden-address">6zG8DPfu...HFj</span>
+        </div>
+        <div class="wallet">
+            <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT">
+            USDT (TRC-20): <span class="hidden-address">TWRoiYA1...thh</span>
+        </div>
+        <div class="wallet">
+            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
+            Bitcoin: <span class="hidden-address">bc1qwy3...c3hx</span>
+        </div>
+        <div class="wallet">
+            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+            Ethereum: <span class="hidden-address">0x2f021C9...81D5A</span>
         </div>
     </div>
+
+    <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>Email us at: <strong>bochkorv@gmail.com</strong></p>
+    </div>
+
     <footer>
         &copy; 2025 TrueTag. Created by Viktor Bocskor & AI partner.
     </footer>
